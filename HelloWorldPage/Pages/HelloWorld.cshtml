@@ -1,4 +1,5 @@
 ﻿@page
+@model HelloWorld
 @{
     Layout = null;
 }
@@ -13,5 +14,7 @@
 <body>
       <p>Hello world!</p>
     <p>the server time is @DateTime.Now.ToString()</p>
+     <p>@Model.Msg</p>
+    <p>@Model.DateTimeNow</p>
 </body>
 </html>
