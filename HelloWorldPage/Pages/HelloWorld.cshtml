@@ -16,5 +16,23 @@
     <p>the server time is @DateTime.Now.ToString()</p>
      <p>@Model.Msg</p>
     <p>@Model.DateTimeNow</p>
+    @using (Html.BeginForm())
+    { 
+        <table>
+            <tr>
+                <td>用户名:</td>
+                <td>@Html.TextBoxFor(m => m.UserName)</td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>@Html.PasswordFor(m=>m.Password)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="登录" /></td>
+            </tr>
+        </table>
+        <p>@Model.Result</p>
+    }
 </body>
 </html>
